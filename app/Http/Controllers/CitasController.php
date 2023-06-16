@@ -152,7 +152,7 @@ class CitasController extends Controller
         $cita->update($data);
         return  redirect()->route('admin.cita.index')->with('success','La cita se ha actualizado correctamente.');
     }
-    public function showIndex()
+    public function Index()
     {
         //Vista de administrador
         $estilos = [
@@ -171,10 +171,11 @@ class CitasController extends Controller
             ->join('personas', 'personas.id', '=', 'clientes.id_persona')
             ->orderBy('citas.updated_at', 'desc')->get();
         //dd($citas);
-        return view('citas.adminIndex')->with([
+        /* return view('citas.adminIndex')->with([
             'citas' => $citas,
             'estilos' => $estilos,
-        ]);
+        ]); */
+        return view('citas.adminIndex');
     }
 
 

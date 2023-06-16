@@ -19,7 +19,6 @@
         <h1>Dashboard</h1>
     @stop
     @section('content')
-<script></script>
         <p>Welcome to this beautiful admin panel.</p>
         <p>Bienvenido </p>
         Prueba git

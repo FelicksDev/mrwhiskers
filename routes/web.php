@@ -108,11 +108,11 @@ Route::prefix('admin')->group(function () {
     Route::get('/home', [HomeController::class, 'show']);
 
 
-    Route::get('/citas', [CitasController::class, 'showIndex'])->name('admin.cita.index');
+    Route::get('/citas', [CitasController::class, 'Index'])->name('admin.cita.index');
     Route::get('/citas/{cita}/edit', [CitasController::class, 'edit'])->name('admin.cita.edit');
     Route::put('/citas/{cita}/update', [CitasController::class, 'update'])->name('admin.cita.update');
     Route::delete('/citas/{cita}/delete', [CitasController::class, 'destroy'])->name('admin.cita.delete');
-    Route::GET('/citas/{cita}/delete', [CitasController::class, 'showIndex']);
+    Route::GET('/citas/{cita}/delete', [CitasController::class, 'Index']);
     Route::get('/citas/actualizar/{id}', [CitasController::class, 'actualizarEstado'])->name('admin.actualizarEstadoCita');
 
 
