@@ -32,7 +32,7 @@ class ClienteRegisterRequest extends FormRequest
             'apellido' =>'required|unique:users,email',
             'telefono' =>'required|unique:users,email',
             'direccion' =>'required|unique:users,email',
-            'email' =>'required|unique:users,email',
+            'email' =>'required',
             'cedula_identidad' =>'required|unique:users,email',
         ];
     }
