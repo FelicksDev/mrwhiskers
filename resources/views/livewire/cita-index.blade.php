@@ -6,12 +6,6 @@
 
             <input type="text" name="" id="" placeholder="Buscar..." class="form-control"
                 wire:model.live="search">
-
-
-            <input wire:model="message" type="text">
-            <h2>{{ $message }}</h2>
-
-
         </div>
     </div>
     <table class="table table-dark table-stripeed mt-4">

@@ -8,7 +8,6 @@ use App\Models\Cita;
 class CitaIndex extends Component
 {
     public $search ='';
-    public $message="sdasd";
     private $estilos = [
         'Pendiente' => 'btn btn-warning',
         'Completada' => 'btn btn-success',
