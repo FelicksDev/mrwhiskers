@@ -7,7 +7,17 @@
             <input type="text" name="" id="" placeholder="Buscar..." class="form-control"
                 wire:model.live="search">
         </div>
+        <div class="col-sm-3">
+            <select name="" class="form-select" wire:model="paginacion">
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+            </select>
+        </div>
     </div>
+
     <table class="table table-dark table-stripeed mt-4">
         <thead>
             <th scope="col">ID</th>
@@ -94,5 +104,6 @@
                 </div>
             @endforeach
         </tbody>
+        {{$citas->links()}}
     </table>
 </div>

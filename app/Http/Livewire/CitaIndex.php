@@ -4,10 +4,18 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Cita;
+use Livewire\WithPagination;
 
 class CitaIndex extends Component
 {
+    use WithPagination;
+    public $paginacion = "1";
     public $search ='';
+    protected $paginationTheme = 'bootstrap';
+    protected $queryString = [
+        'search' => ['except' => '', 'as' => 'b'],
+        'paginacion' => ['except' => 1, 'as' => 'p'],
+    ];
     private $estilos = [
         'Pendiente' => 'btn btn-warning',
         'Completada' => 'btn btn-success',
@@ -16,7 +24,10 @@ class CitaIndex extends Component
     public function render()
     {
         $citas = $this->consulta();
-        $params = $citas->get();
+        $params = $citas->paginate($this->paginacion);
+        if($params->currentPage()>$params->lastPage()){
+           $this->resetPage();
+        }
         return view('livewire.cita-index')->with([
             'citas'=> $params,
             'estilos' =>$this->estilos,
