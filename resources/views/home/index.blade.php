@@ -22,6 +22,7 @@
 <script></script>
         <p>Welcome to this beautiful admin panel.</p>
         <p>Bienvenido </p>
+        Prueba git
        {{--  <p>Agregar un panel que mnuestre las cantida de cita que tiene pendiente el dia presente</p>
         @can('admin')
             <p>Eres el usuario Administrador </p>
