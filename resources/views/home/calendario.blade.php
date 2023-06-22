@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @extends('layout.header')
-    {{-- Full Calendar dependency --}}
+
+
+    @section('js')
+         {{-- Full Calendar dependency --}}
     <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="{{ asset('js/index.global.min.js') }}"></script>
     <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/moment@6.1.6/index.global.min.js'></script>
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> --}}
+    
+    @stop
     @extends('partials.calendarScript')
 
-</head>
 
-<body>
     @csrf
     @extends('adminlte::page')
     @section('title', 'Calendario - Whiskers')
@@ -131,13 +127,3 @@
 
     @stop
 
-    @auth
-
-
-    @endauth
-    @guest
-
-    @endguest
-</body>
-
-</html>

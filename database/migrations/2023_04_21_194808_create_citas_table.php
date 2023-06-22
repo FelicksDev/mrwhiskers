@@ -27,8 +27,6 @@ return new class extends Migration
             $table->foreign('id_estado_de_cita')->references('id')->on('estado_de_citas');
             $table->timestamps();
             //$table->foreign('id_mascota')->references('id')->on('mascotas');
-            
-
         });
     }
 

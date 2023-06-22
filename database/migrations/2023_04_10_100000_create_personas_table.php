@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre');
-            $table->string('apellido');
+            $table->string('apellido');            
             $table->integer('telefono');
             $table->string('fecha_nac');
             $table->string('direccion');
             $table->string('correo')->unique();
             $table->string('cedula_de_identidad')->unique();
+            $table->string("estado")->default("activo");
         });
     }
 

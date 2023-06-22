@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('transaccion_autorizada', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->string('username')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string("estado")->default("activo");
-            $table->rememberToken();
+            $table->unsignedBigInteger("id_rol");
+            $table->unsignedBigInteger("id_transaccion");
+            $table->foreign('id_rol')->references('id')->on('roles');
+            $table->foreign('id_transaccion')->references('id')->on('transaccion');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('transaccion_autorizada');
     }
 };

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Editar Cita</title>
     @extends('layout.header')
-</head>
-
-<body>
     @csrf
     @extends('adminlte::page')
     @section('title', 'Editar Cita')
@@ -92,9 +81,4 @@
         </div>
     @stop
     @extends('partials.footerScripts')
-    @section('js')
-        <script></script>
-    @stop
-</body>
 
-</html>

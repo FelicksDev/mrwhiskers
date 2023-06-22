@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @extends('layout.header')
-
-</head>
-
-<body>
     @csrf
     @extends('adminlte::page')
     @section('title', 'Mis citas')
@@ -35,7 +24,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Descripcion</th>
                         <th scope="col">Fecha</th>
-                        <th scope="col">Hora</th>
+                        <th scope="col">Hora</th> 
 
                         <th scope="col">Tipo de cita</th>
                         <th scope="col">Estado</th>
@@ -49,7 +38,7 @@
                                 <td>{{ $cita->fecha }}</td>
                                 <td>{{ $cita->hora }}</td>
                                 <td>{{ $cita->tipo_de_cita }}</td>
-                                <td>
+                                <td> 
                                     <button class="{{ $estilos[$cita->estado_de_cita] }}">
                                         {{ $cita->estado_de_cita }}
                                     </button>
@@ -127,25 +116,5 @@
                     }
                 })
             });
-            /* Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
-                }
-            }) */
         </script>
     @stop
-</body>
-
-</html>

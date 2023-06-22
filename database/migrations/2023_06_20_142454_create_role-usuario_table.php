@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('role-usuario', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->string('username')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string("estado")->default("activo");
-            $table->rememberToken();
+            $table->unsignedBigInteger('id_usuario');//Llave foranea a usuario
+            $table->unsignedBigInteger('id_roles');//Llave foranea a roles
+            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_roles')->references('id')->on('roles');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('role-usuario');
     }
 };

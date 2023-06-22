@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -40,5 +41,20 @@ class EstadoCitaSeeder extends Seeder
             ];
 
         DB::table('estado_de_citas')->insert($data);
+        DB::table('role-usuario')->insert([
+            [
+                'id_usuario' => '1',
+                'id_roles' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'id_usuario' => '2',
+                'id_roles' => '2',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+
+        ]);
     }
 }

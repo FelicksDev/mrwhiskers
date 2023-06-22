@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @extends('layout.header')
     @livewireStyles
-</head>
-
-<body>
     @csrf
     @extends('adminlte::page')
     @section('title', 'Lista de citas')
@@ -181,6 +172,4 @@
         </script>
     @stop
     @livewireScripts
-</body>
 
-</html>

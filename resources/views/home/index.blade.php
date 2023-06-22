@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @extends('layout.header')
-    {{--     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link href="{{ asset('/css/sidebars.css') }}" rel="stylesheet"> --}}
-</head>
-
-<body>
     @csrf
     @extends('adminlte::page')
     @section('title', 'Dashboard')
@@ -130,6 +117,3 @@
             })
         </script>
     @stop
-</body>
-
-</html>
