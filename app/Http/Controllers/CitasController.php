@@ -51,7 +51,7 @@ class CitasController extends Controller
         //error ttempt to read property "id_cliente" on null
 
         $tipo_de_cita = DB::table('tipo_de_cita')->select('*')->get();
-        return view('reservaCitas', [
+        return view('citas.reservaCitas', [
             'cliente' => $cliente,
             'datas' => $tipo_de_cita,
         ]);

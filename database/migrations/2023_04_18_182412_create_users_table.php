@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('fecha_cambio')->nullable();
+            $table->string('fecha_expiracion')->nullable();
             $table->string("estado")->default("activo");
             $table->rememberToken();
             $table->timestamps();
