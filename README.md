@@ -71,6 +71,6 @@ pass. 123
 
 El proyecto se distribuye bajo la licencia MIT. Para obtener más información, consulte el archivo **LICENSE** en el repositorio del proyecto.
 
-<strong>Autor:</strong> <br>
+<strong>Autor(es):</strong> <br>
 |[<img src="https://avatars.githubusercontent.com/u/101672631?v=4" width=115> <br><small>@FelicksDev</small>](https://github.com/FelicksDev)|
 | :---------------------------------------------------------------------------------------------------------------------------------: |
